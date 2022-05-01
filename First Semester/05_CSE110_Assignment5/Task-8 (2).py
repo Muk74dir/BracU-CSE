@@ -9,4 +9,4 @@ for i in temp:
 for j in new_dict.values():
     result += int(j)
     counter += 1
-print("Average is", int(result / counter), end=".")
+print("Average is", int(result / counter), end=".") 
