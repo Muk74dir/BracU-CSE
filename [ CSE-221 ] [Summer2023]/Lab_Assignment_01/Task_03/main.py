@@ -8,9 +8,6 @@ n = int(infile.readline().strip())
 id = list(map(int, infile.readline().strip().split()))
 mark = list(map(int, infile.readline().strip().split()))
 
-data = {}
-
-
 for i in range(n):
     min_idx = i
     for j in range(i+1, n):
@@ -25,7 +22,6 @@ for i in range(n):
     id[i], id[min_idx] = id[min_idx], id[i]
 
 for i in range(n):
-    data[id[i]] = mark[i]
     outfile.write(f'ID: {id[i]} Mark: {mark[i]}\n')
     
 infile.close()
