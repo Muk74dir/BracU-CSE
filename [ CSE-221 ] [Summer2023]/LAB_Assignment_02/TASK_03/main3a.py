@@ -6,8 +6,6 @@ outfile = open(outpath, 'w')
 n = int(infile.readline().strip())
 data = list(map(int, (infile.readline().strip().split())))
 
-
-
 def merge_sort(data):
     if len(data) <= 1:
         return data
@@ -38,7 +36,6 @@ def merge_sort(data):
         sorted_data.extend(sorted_right[j:])
     
     return sorted_data
-
 
 answer = merge_sort(data)
 
