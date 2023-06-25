@@ -8,8 +8,7 @@ outfile = open(outpath, 'w')
 n = int(infile.readline().strip())
 data = list(map(int, (infile.readline().strip().split())))
 
-
-def div_and_conq(data, maxvalue=-math.inf):
+def div_and_conq(data, maxvalue = -math.inf):
     if len(data) == 1:
         return data, data[0]
     
@@ -32,6 +31,7 @@ def div_and_conq(data, maxvalue=-math.inf):
     return left[0] + right[0], maxvalue
 
 outfile.write(str(div_and_conq(data)[1]))
+
 
 infile.close()
 outfile.close()
