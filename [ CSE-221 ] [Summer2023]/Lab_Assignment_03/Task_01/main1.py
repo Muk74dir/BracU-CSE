@@ -1,25 +1,23 @@
-inpath = "input.txt"
+inpath = "input1.txt"
 infile = open(inpath, 'r')
 
-outpath = "output.txt"
+outpath = "output1.txt"
 outfile = open(outpath, 'w')
 
 n = int(infile.readline().strip())
 data = list(map(int, (infile.readline().strip().split())))
 
-cnt = 0
-
-def mergesort(data, cnt):
+def divide_n_conqure(data, cnt=0):
     if len(data) <= 1:
         return data, cnt
+    
     mid_ind = len(data)//2
-
     left = data[:mid_ind]
     right = data[mid_ind:]
 
 
-    sorted_left, cnt_left = mergesort(left, cnt)
-    sorted_right, cnt_right = mergesort(right, cnt)
+    sorted_left, cnt_left = divide_n_conqure(left, cnt)
+    sorted_right, cnt_right = divide_n_conqure(right, cnt)
 
     sorted_all = []
 
@@ -47,8 +45,7 @@ def mergesort(data, cnt):
 
     return sorted_all, cnt_left+cnt+cnt_right
 
-outfile.write(str(mergesort(data, cnt)[1]))
-
+outfile.write(str(divide_n_conqure(data)[1]))
 
 infile.close()
 outfile.close()
