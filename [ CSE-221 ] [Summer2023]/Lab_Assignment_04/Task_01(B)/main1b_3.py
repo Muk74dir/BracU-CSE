@@ -1,7 +1,7 @@
 inpath = "input1b_3.txt"
 infile = open(inpath, 'r')
 
-outpath = "utput1b_3.txt"
+outpath = "output1b_3.txt"
 outfile = open(outpath, 'w')
 
 v, e = list(map(int, infile.readline().strip().split()))
