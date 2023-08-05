@@ -12,18 +12,18 @@ indegre = [0 for i in range(v+1)]
 
 
 def BFS_Topological_Sort(adj_list, indegre):
-    queue = []
+    stack = []
     for i in range(1, (v+1)):
         if indegre[i] == 0:
-            queue.append(i)
+            stack.append(i)
     result = []      
-    while queue:
-        temp = queue.pop(0)
+    while stack:
+        temp = stack.pop(0)
         result.append(temp)
         for adj_node in adj_list[temp]:
             indegre[adj_node] -= 1
             if indegre[adj_node] == 0:
-                queue.append(adj_node)
+                stack.append(adj_node)
                     
     return result
                 
