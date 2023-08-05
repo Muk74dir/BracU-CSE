@@ -18,3 +18,6 @@ for i in range(v+1):
     for j in range(len(adj_list[i])):
         print(adj_list[i][j], end=" ", file=outfile)
     print(file=outfile)
+
+infile.close()
+outfile.close()

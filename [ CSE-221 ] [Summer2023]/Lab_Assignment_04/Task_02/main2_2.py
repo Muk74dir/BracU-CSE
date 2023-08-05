@@ -7,7 +7,7 @@ outfile = open(outpath, 'w')
 v, e = list(map(int, infile.readline().strip().split()))
 visited = [0 for i in range(v+1)]
 
-adj_list = [[]for i in range(1, v+1) for j in range(v+1)]
+adj_list = [[]for i in range(v+1)]
 
 for i in range(e):
     f, t = list(map(int, infile.readline().strip().split()))
@@ -30,6 +30,9 @@ def BFS_Traversal(adj_list, source):
 
 source = 1
 BFS_Traversal(adj_list, source)
+
+infile.close()
+outfile.close()
 
 
 
