@@ -22,7 +22,6 @@ def DFS_Traversal(adj_list, selected):
             DFS_Traversal(adj_list, adj_node)
 
 selected = 1
-
 DFS_Traversal(adj_list, selected)
 
 

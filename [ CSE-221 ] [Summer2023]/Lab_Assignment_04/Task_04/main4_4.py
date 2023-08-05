@@ -43,6 +43,5 @@ if Cycle_Exist:
 else:
     print("NO", file=outfile)
 
-
 infile.close()
 outfile.close()

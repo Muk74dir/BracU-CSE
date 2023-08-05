@@ -31,6 +31,7 @@ def BFS_Traversal(adj_list, source):
 source = 1
 BFS_Traversal(adj_list, source)
 
+
 infile.close()
 outfile.close()
 

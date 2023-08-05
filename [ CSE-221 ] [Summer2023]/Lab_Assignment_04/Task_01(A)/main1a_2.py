@@ -12,7 +12,6 @@ for i in range(e):
     f, t, w =  list(map(int, infile.readline().strip().split()))
     adj_matrix[f][t] = w
 
-
 for i in range(v+1):
     for j in range(v+1):
         outfile.write(str(adj_matrix[i][j]) + " ")

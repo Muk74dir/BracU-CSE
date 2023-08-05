@@ -1,6 +1,5 @@
 inpath = "input5_4.txt"
 infile = open(inpath, 'r')
-
 outpath = "output5_4.txt"
 outfile = open(outpath, 'w')
 
@@ -40,7 +39,6 @@ def BFS_Traversal(adj_list, source):
 source = 1
 BFS_Traversal(adj_list, source)
 
-
 print(f"Time : {level[dest]}", file=outfile)
 
 
@@ -50,7 +48,6 @@ while True:
     if dest == source:
         break
     dest = parent[dest]
-
 
 answer.reverse()
 print("Shortest Path: ", end="", file=outfile)
