@@ -10,11 +10,11 @@ visited = [0 for i in range(v+1)]
 visited_cycle = [0 for i in range(v+1)]
 stack = []
 
-def DFS_Traversal(source):
+def DFS_Topological_Sort(source):
     visited[source] = 1
     for adj_node in adj_list[source]:
         if visited[adj_node] == 0:
-            DFS_Traversal(adj_node)
+            DFS_Topological_Sort(adj_node)
     stack.append(source)
 
 def Cycle_Detect(selected):
@@ -48,7 +48,7 @@ if Cycle_Exist:
 else:  
     for i in range(1, (v+1)):
         if visited[i] == 0:
-            DFS_Traversal(i)
+            DFS_Topological_Sort(i)
 
     while len(stack) != 0:
         print(stack.pop(-1), end=" ", file=outfile)

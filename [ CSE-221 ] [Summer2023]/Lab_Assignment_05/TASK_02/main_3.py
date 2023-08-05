@@ -1,7 +1,9 @@
-inpath = "inputB_3.txt"
+import heapq
+
+inpath = "input_3.txt"
 infile = open(inpath, "r")
 
-outpath = "outputB_3.txt"
+outpath = "output_3.txt"
 outfile = open(outpath, "w")
 
 v, e = list(map(int, infile.readline().strip().split()))
@@ -11,20 +13,19 @@ visited_cycle = [0 for i in range(v+1)]
 indegre = [0 for i in range(v+1)]
 
 
-def BFS_Topological_Sort(adj_list, indegre):
+def BFS_Topological_Sort(adj_list, indegree):
     queue = []
     for i in range(1, (v+1)):
-        if indegre[i] == 0:
-            queue.append(i)
+        if indegree[i] == 0:
+            heapq.heappush(queue, i)
     result = []      
     while queue:
-        temp = queue.pop(0)
+        temp = heapq.heappop(queue)
         result.append(temp)
         for adj_node in adj_list[temp]:
-            indegre[adj_node] -= 1
-            if indegre[adj_node] == 0:
-                queue.append(adj_node)
-                    
+            indegree[adj_node] -= 1
+            if indegree[adj_node] == 0:
+                heapq.heappush(queue, adj_node)
     return result
                 
 def Cycle_Detect(selected):

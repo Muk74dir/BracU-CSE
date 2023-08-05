@@ -1,6 +1,6 @@
-inpath = "input.txt"
+inpath = "input_3.txt"
 infile = open(inpath, 'r')
-outpath = "output.txt"
+outpath = "output_3.txt"
 outfile = open(outpath, 'w')
 
 v, e = list(map(int, infile.readline().strip().split()))
