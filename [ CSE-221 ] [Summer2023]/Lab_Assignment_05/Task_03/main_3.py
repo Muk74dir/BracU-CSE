@@ -1,6 +1,6 @@
-inpath = "input_2.txt"
+inpath = "/workspaces/BracU-CSE/[ CSE-221 ] [Summer2023]/Lab_Assignment_05/Task_03/input_1.txt"
 infile = open(inpath, 'r')
-outpath = "output_2.txt"
+outpath = "/workspaces/BracU-CSE/[ CSE-221 ] [Summer2023]/Lab_Assignment_05/Task_03/output_1.txt"
 outfile = open(outpath, 'w')
 
 v, e = list(map(int, infile.readline().strip().split()))
