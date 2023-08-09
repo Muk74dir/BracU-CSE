@@ -1,0 +1,55 @@
+{
+
+    "terminal.integrated.profiles.windows":{"Git Bash":{"path":"C:\\Program Files\\Git\\bin\\bash.exe"},  },
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "yaml": false
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "window.zoomLevel": 2,
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.files.associations": {
+        "**.html": "html",
+    },
+    "material-icon-theme.folders.associations": {
+
+    },
+    "emmet.includeLanguages": {
+        "django-html": "html",
+        "jinja-html": "html"
+    },
+
+    "[django-html]": {
+        "editor.defaultFormatter": "HookyQR.beautify",
+        "editor.quickSuggestions": {
+            "comments": true,
+            "other": true,
+            "strings": true
+        },
+        "editor.tabSize": 4,
+        "editor.wordWrap": "on"
+    },
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "Default Dark+",
+    "explorer.compactFolders": false,
+    "editor.cursorBlinking": "expand",
+    "terminal.integrated.cursorWidth": 0,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorWidth": 3,
+    "python.linting.enabled": false,
+
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#fd00b5",
+        "terminalCursor.foreground": "#ff00b7"
+    }
+}
