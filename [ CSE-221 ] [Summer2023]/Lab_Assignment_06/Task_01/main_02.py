@@ -18,9 +18,9 @@ print(sorted_tasks)
 ans = []
 ans.append(sorted_tasks[0])
 
+
 for i in range(1, len(sorted_tasks)):
     if ans[-1][1] <= sorted_tasks[i][0]:
         ans.append(sorted_tasks[i])
     
-
 print(ans)
