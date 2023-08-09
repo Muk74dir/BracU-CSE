@@ -6,3 +6,11 @@ actors = [
 juniors = filter(lambda x : x["age"] < 50, actors)
 print(actors)
 print(list(juniors))
+
+
+
+def lamda(x):
+    return x["age"] < 50
+
+juniors = filter(lamda, actors)
+print(list(juniors))
