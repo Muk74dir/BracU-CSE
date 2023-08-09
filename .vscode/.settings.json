@@ -1,6 +1,6 @@
 {
 
-    "terminal.integrated.profiles.windows":{"Git Bash":{"path":"C:\\Program Files\\Git\\bin\\bash.exe"},  },
+    "terminal.integrated.profiles.windows":{"Git Bash":{"path":"C:\\Program Files\\Git\\bin\\bash.exe"}},
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     
     "terminal.integrated.enableMultiLinePasteWarning": false,
@@ -19,7 +19,7 @@
     "window.zoomLevel": 2,
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.files.associations": {
-        "**.html": "html",
+        "**.html": "html"
     },
     "material-icon-theme.folders.associations": {
 
