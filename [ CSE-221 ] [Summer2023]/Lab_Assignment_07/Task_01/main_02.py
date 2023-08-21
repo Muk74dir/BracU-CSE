@@ -1,6 +1,6 @@
-inpath = "/workspaces/BracU-CSE/[ CSE-221 ] [Summer2023]/Lab_Assignment_06/input.txt"
+inpath = "C:\For-Github\BracU - CSE\[ CSE-221 ] [Summer2023]\Lab_Assignment_07\Task_01\input_01.txt"
 infile = open(inpath, 'r')
-outpath = "/workspaces/BracU-CSE/[ CSE-221 ] [Summer2023]/Lab_Assignment_06/output.txt"
+outpath = "C:\For-Github\BracU - CSE\[ CSE-221 ] [Summer2023]\Lab_Assignment_07\Task_01\input_02.txt"
 outfile = open(outpath, 'w')
 
 n = int(infile.readline().strip())
@@ -17,7 +17,6 @@ print(sorted_tasks)
 
 ans = []
 ans.append(sorted_tasks[0])
-
 for i in range(1, len(sorted_tasks)):
     if ans[-1][1] <= sorted_tasks[i][0]:
         ans.append(sorted_tasks[i])
