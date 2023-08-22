@@ -20,20 +20,19 @@ def sorted_tasks_by_diff(array):
 
 
 diff_sorted_tasks = sorted(tasks, key=lambda x: abs(x[0] - x[1]), reverse=True)
-print(diff_sorted_tasks)
 cnt = 0
 
 for i in range(people):
     diff = abs(diff_sorted_tasks[i][0] - diff_sorted_tasks[i][1])
-    
     print(diff) # 4
+
     sorted_tasks = sorted_tasks_by_diff(diff_sorted_tasks)
     j = 0 
+    print(diff_sorted_tasks)
     while j < len(sorted_tasks):
         if abs(sorted_tasks[j][0] - sorted_tasks[j][1]) == diff:
             diff_sorted_tasks.pop(0)
             cnt += 1
-            print(sorted_tasks[j])
         j += 1
-    
-    print(diff_sorted_tasks)
+
+print(diff_sorted_tasks)
