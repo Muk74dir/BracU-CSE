@@ -22,3 +22,7 @@ for i in range(1, len(sorted_tasks)):
 outfile.write(f"{len(ans)}\n")
 for i in ans:
     outfile.write(f"{i[0]} {i[1]}\n")
+
+
+infile.close()
+outfile.close()
