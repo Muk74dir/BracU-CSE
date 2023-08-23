@@ -26,3 +26,6 @@ circle = [ 1 for i in range(person) ]
 for i in range(query):
     a, b = map(int, infile.readline().split())
     union(a, b)
+
+infile.close()
+outfile.close()
