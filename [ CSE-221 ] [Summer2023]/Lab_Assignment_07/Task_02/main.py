@@ -1,6 +1,6 @@
-inpath = "C:\For-Github\BracU - CSE\[ CSE-221 ] [Summer2023]\Lab_Assignment_07\Task_02\input_02.txt"
+inpath = "input_04.txt"
 infile = open(inpath, "r")
-outpath = "C:\For-Github\BracU - CSE\[ CSE-221 ] [Summer2023]\Lab_Assignment_07\Task_02\output_02.txt"
+outpath = "output_04.txt"
 outfile = open(outpath, "w")
 tasks = []
 task, people = list(map(int, infile.readline().split()))
