@@ -1,41 +1,30 @@
-import heapq
-
-inpath = "input_04.txt"
+inpath = "C:\For-Github\BracU - CSE\[ CSE-221 ] [Summer2023]\Lab_Assignment_07\Task_02\input_02.txt"
 infile = open(inpath, "r")
-outpath = "output_04.txt"
+outpath = "C:\For-Github\BracU - CSE\[ CSE-221 ] [Summer2023]\Lab_Assignment_07\Task_02\output_02.txt"
 outfile = open(outpath, "w")
 tasks = []
 task, people = list(map(int, infile.readline().split()))
+
+def sorted_by_time(array): 
+    ans = []
+    ans.append(array[0])
+    for i in range(1, len(array)):
+        if ans[-1][1] <= array[i][0]:
+            ans.append(array[i])
+    return ans
 
 for i in range(task):
     start, end = tuple(map(int, infile.readline().split()))
     tasks.append((start, end))
 
-def sorted_tasks(array):
-    ans = []
-    ans.append(array[0])
-    ini_sorted_tasks = sorted(array, key=lambda x: x[1])
-    for i in range(1, len(ini_sorted_tasks)):
-        if ans[-1][1] <= ini_sorted_tasks[i][0]:
-            ans.append(ini_sorted_tasks[i])
-    return ans
+tasks.sort(key = lambda x: x[0])
+assigned_tasks = []
 
-
-diff_sorted_tasks = sorted(tasks, key=lambda x: abs(x[0] - x[1]), reverse=True)
-
-cnt = 0
 for i in range(people):
-    diff = abs(diff_sorted_tasks[i][0] - diff_sorted_tasks[i][1])
+    temp = sorted_by_time(tasks)
+    assigned_tasks += temp
+    tasks = [x for x in tasks if x not in temp]
 
-    sorted_by_start_end = sorted_tasks(diff_sorted_tasks)
-    i = 0
-    while i < len(diff_sorted_tasks):
-        if diff == abs(diff_sorted_tasks[i][0] - diff_sorted_tasks[i][1]):
-            diff_sorted_tasks.remove(diff_sorted_tasks[i])
-            cnt += 1
-        i += 1
-    
-outfile.write(str(cnt+1))
-
+outfile.write(str(len(assigned_tasks)) + "\n")
 infile.close()
 outfile.close()
