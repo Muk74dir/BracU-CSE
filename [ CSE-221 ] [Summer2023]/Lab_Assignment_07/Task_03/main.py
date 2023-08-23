@@ -1,6 +1,6 @@
-inpath = "C:\For-Github\BracU - CSE\[ CSE-221 ] [Summer2023]\Lab_Assignment_07\Task_03\input_01.txt"
+inpath = "input_01.txt"
 infile = open(inpath, 'r')
-outpath = "C:\For-Github\BracU - CSE\[ CSE-221 ] [Summer2023]\Lab_Assignment_07\Task_03\output_01.txt"
+outpath = "output_01.txt"
 outfile = open(outpath, 'w')
 
 def find_representative(a):
@@ -15,7 +15,7 @@ def union(a, b):
     if u != v:
         parent[u] = v
         circle[v] += circle[u]
-        
+
     outfile.write(str(circle[v]) + '\n')
 
 
