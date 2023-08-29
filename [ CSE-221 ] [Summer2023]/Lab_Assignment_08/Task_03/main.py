@@ -1,8 +1,8 @@
 import math
 
-inpath = "C:\For-Github\BracU - CSE\[ CSE-221 ] [Summer2023]\Lab_Assignment_08\Task_03\input_01.txt"
+inpath = "input_01.txt"
 infile = open(inpath, 'r')
-outpaht = "C:\For-Github\BracU - CSE\[ CSE-221 ] [Summer2023]\Lab_Assignment_08\Task_03\output_01.txt"
+outpaht = "output_01.txt"
 outfile = open(outpaht, 'w')
 
 type, target = map(int, infile.readline().strip().split())
